@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Manejo del DOM HTML</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecero" class="azul">Ejemplo de DOM</h1> 
+    <p id="parrafo" class="azul">Saludos</p>
+    <h2 id="titulo2">Hola Hola Hola </h2>
+    <p class="azul">Qué más pues?</p>
+    <p>Cómo va todo ?</p>
+
+    <script> //script debe ir despues de los elementos htmt
+        let cabecero = document.getElementById("cabecero");
+        //innerHTML muestra el contenido de los elementos
+        console.log(cabecero.innerHTML);
+        let parrafo=document.getElementById("parrafo");
+        console.log(parrafo.innerHTML);
+        let titulo2=document.getElementById("titulo2");
+        console.log(`Valor titulo: ${titulo2.innerHTML}`);
+        
+        //innerHTML también modifica elementos html
+        parrafo.innerHTML="nuevo valor ";
+        
+        let parrafos=document.getElementsByTagName("p");//se crea un arreglo con todos los elementos tipo parrafo
+        console.log(`Numero de parrafos: ${parrafos.length}`);
+        for (let i = 0; i < parrafos.length; i++) {
+            console.log(`Valor parrafo ${i}: ${parrafos[i].innerHTML}`);
+        }
+        let elementos=document.getElementsByClassName("azul") //cualquier elemento que pertenezca a la clase azil
+        for (let i of elementos) {
+        console.log(`elemento clase azul:  ${i.innerHTML}`);
+        }
+        let parrafosazules=document.querySelectorAll("p.azul");//todos los parrafos que sea de la clase azul
+        console.log(`Numero de parrafos azules: ${parrafosazules.length}`);
+        for (let i of parrafosazules) {
+            console.log(`Valor parrafo azul ${i.innerHTML}`);
+        }
+
+
+        
+
+    </script>
+    
+</body>
+</html>

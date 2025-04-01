@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de dom con js</h1>
+    <button onclick="mostrar()">mostrar</button>
+    <img id="img" src="http://globalmentoring.com.mx/imagenes/javascript.png"/>
+    <script>
+        document.write("hola")
+         //esto puede escribir directamente en el documento html, pero sobreescribre sobrecualquier cosa
+         function  mostrar(){
+            //document.write("adios");//esto borra todo lo demas
+            document.getElementById("img").src="http://globalmentoring.com.mx/imagenes/html5.png";//así se modifica los atributos
+            //en este caso el atributo src
+            document.getElementById("titulo").style.color="blue";
+            document.getElementById("titulo").innerHTML+=" y Me llamo Pacho"; 
+         }
+    </script>
+   
+    
+</body>
+</html>

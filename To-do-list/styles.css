@@ -1,0 +1,103 @@
+/* Reset básico */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #C0CDEC; /* Fondo general del sitio */
+  color: #302F38; /* Texto principal */
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #2F3A6E; /* Color del título */
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+/* Contenedor de la barra */
+.contenedor {
+  width: 40%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #2F3A6E; /* Fondo del contenedor */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de la barra de búsqueda */
+.barra {
+  width: 80%;
+  height: 40px;
+  border: 2px solid #7174B9;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: #ABC4E6; /* Fondo de la barra */
+  color: #302F38; /* Color del texto */
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Placeholder de la barra de búsqueda */
+.barra::placeholder {
+  color: #302F38; /* Color del placeholder */
+}
+
+/* Barra activa (cuando el usuario escribe) */
+.barra:focus {
+  outline: none;
+  border-color: #2F3A6E; /* Color de borde al enfocar */
+  background-color: #C0CDEC; /* Cambia el fondo al enfocar */
+}
+
+/* Estilos de la lista de tareas */
+.tareas {
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #7174B9; /* Fondo de la lista de tareas */
+  border-radius: 10px;
+  color: #F1F1F1; /* Texto de la lista */
+  text-align: left;
+}
+
+/* Estilos de los ítems de la lista */
+ul {
+  list-style-type:none;
+ 
+}
+
+ul li {
+  margin:15px 15px;
+  padding: 10px;
+  background-color: #2F3A6E;
+  color: #F1F1F1;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+ul li:hover {
+  background-color: #ABC4E6;
+}
+
+
+ button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2F3A6E;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: solid 5px #7174B9;  /* Mejora la visibilidad del borde */
+    box-shadow:3px 3px 3px #2F3A6E;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  }
+  button:hover {
+    background-color: #7174B9;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); /* Efecto de sombra al pasar el cursor */
+  }
+ 

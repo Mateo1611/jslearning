@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body >
+    
+<div class="contenedor">
+    <input type="input" readonly id="display"> 
+
+    <div class="botones button">
+        <button id="limpiar" class="oper" onclick="limpiador()">C</button>
+            <button id="borrar" class="oper" onclick="borrador()"><i class="bi bi-x-circle"></i></button>
+            <button id="div" class="oper" onclick="division()">÷</button>
+            <button id="mult" class="oper" onclick="multiplicador()">×</button>
+            <button id="7" class="numero" onclick="agregarNumero('7')">7</button>
+            <button id="8" class="numero" onclick="agregarNumero('8')">8</button>
+            <button id="9" class="numero" onclick="agregarNumero('9')">9</button>
+            <button id="resta" class="resta oper" onclick="restador()">-</button>
+            <button id="4" class="numero" onclick="agregarNumero('4')">4</button>
+            <button id="5" class="numero" onclick="agregarNumero('5')">5</button>
+            <button id="6" class="numero" onclick="agregarNumero('6')">6</button>
+            <button id="suma" class="suma oper" onclick="sumador()">+</button>
+            <button id="1" class="numero" onclick="agregarNumero('1')">1</button>
+            <button id="2" class="numero" onclick="agregarNumero('2')">2</button>
+            <button id="3" class="numero" onclick="agregarNumero('3')">3</button>
+            <button id="equal" class="igual oper" onclick="igualador()">=</button>
+            <button id="decimal" class="oper" onclick="agregarNumero('.')">,</button>
+            <button id="0" class="numero" onclick="agregarNumero('0')">0</button>
+            <button id="pos-neg" class="oper" onclick="agregarNumero('-')">+/-</button>
+        
+
+    </div>
+    <script src="app2.js"></script>
+
+
+
+</div>
+
+    
+</body>
+</html>

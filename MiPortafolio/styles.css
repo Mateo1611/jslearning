@@ -1,0 +1,475 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: #FBFADA;  /* Fondo beige claro */
+  color: #12372A;  /* Texto verde oscuro */
+  overflow-x: hidden;
+  transition: background 0.5s ease;
+}
+
+/* Efecto de fondo dinámico */
+body.active-gradient {
+  background-color: #ADBC9F;  /* Fondo verde claro */
+}
+
+/* Estilos para la mitad fija (Sidebar) */
+.sidebar {
+  position: fixed;
+  width: 30%;
+  height: 100vh;
+  background-color: #12372A;  /* Fondo verde oscuro */
+  color: #FBFADA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-right: 2px solid #ADBC9F;  /* Borde en la barra lateral */
+}
+
+.sidebar-content {
+  width: 80%;
+}
+
+.sidebar h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #FBFADA;  /* Texto beige claro */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #ADBC9F;  /* Texto verde claro */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav ul li {
+  margin: 25px 0;  /* Mayor espacio entre elementos */
+}
+
+nav ul li a {
+  color: #FBFADA;  /* Texto beige */
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #436850;  /* Verde intermedio al hover */
+  transform: scale(1.1);
+  border-bottom: 2px solid #436850;  /* Subrayado al hover */
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-links a {
+  color: #FBFADA;
+  margin-right: 15px;  /* Aumenta el espacio entre ellos */
+  font-size: 24px;  /* Tamaño aumentado para más presencia visual */
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ADBC9F;
+  transform: scale(1.2);
+}
+
+/* Estilos para la mitad scrollable (Content) */
+.content {
+  margin-left: 30%;
+  width: 70%;
+  padding: 40px;
+  background-color: #FBFADA;  /* Fondo beige claro */
+  overflow-y: auto;
+}
+
+.content section {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #12372A;  /* Verde oscuro */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #436850;  /* Cambia el color al hover */
+  text-decoration: underline;  /* Subrayado al hover */
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #436850;  /* Verde intermedio */
+}
+
+.experience-item, .project-item {
+  margin-bottom: 40px;
+  background-color: #ADBC9F;  /* Fondo verde claro */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);  /* Sombra ligera */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.experience-item:hover, .project-item:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Habilidades en cuadrícula */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  background-color: #ADBC9F;  /* Fondo verde claro */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);  /* Sombra ligera */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: #436850;  /* Verde intermedio al hover */
+  color: #FBFADA;
+  transform: translateY(-5px);
+}
+
+.skill-item i {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #12372A;  /* Verde oscuro */
+}
+
+.skill-item h4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #12372A;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #FBFADA;
+  color: #12372A;
+}
+
+button {
+  padding: 12px;
+  background-color: #436850;  /* Verde intermedio */
+  color: #FBFADA;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #12372A;  /* Verde oscuro al hover */
+  color: #FBFADA;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Estilos del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #006494; /* Color del switch activado */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Modo oscuro */
+/* Estilos del switch */
+/* Estilos del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #EA516F; /* Color del switch activado */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Modo oscuro */
+.dark-mode body {
+  background-color: #161616;  /* Fondo oscuro */
+  color: #EDEDED;  /* Texto claro */
+}
+
+.dark-mode .sidebar {
+  background-color: #161616;  /* Fondo de la barra lateral en modo oscuro */
+  color: #EDEDED;
+  border-right: 2px solid #161616;  /* Línea divisoria oscura */
+}
+
+.dark-mode .sidebar h1 {
+  color: #EDEDED;  /* Título en modo oscuro */
+}
+
+.dark-mode .sidebar h2 {
+  color: #EA516F;  /* Subtítulos en modo oscuro */
+}
+
+.dark-mode nav ul li a {
+  color: #EDEDED;  /* Enlaces en modo oscuro */
+  text-decoration: none;
+  border-bottom: 1px solid transparent;  /* Evita bordes verdes */
+}
+
+.dark-mode nav ul li a:hover {
+  color: #EA516F;  /* Hover con acento rosado */
+  text-decoration: underline;
+  border-bottom: 1px solid #EA516F;  /* Subrayado rosado al hover */
+}
+
+.dark-mode .content {
+  background-color: #161616;  /* Fondo del contenido en modo oscuro */
+  color: #EDEDED;  /* Texto claro */
+}
+
+.dark-mode h2 {
+  color: #EA516F;  /* Títulos de secciones en rosa */
+}
+
+.dark-mode p {
+  color: #EDEDED;  /* Texto en modo oscuro */
+}
+
+.dark-mode .skills-grid {
+  background-color: #161616;  /* Fondo de la sección Habilidades */
+}
+
+.dark-mode .skills-grid .skill-item {
+  background-color: #161616;  /* Fondo oscuro para las tarjetas de habilidades */
+  color: #EDEDED;  /* Texto claro */
+}
+
+.dark-mode .skills-grid .skill-item:hover {
+  background-color: #EA516F;  /* Hover en rosado */
+  color: #161616;  /* Texto oscuro cuando se activa */
+}
+
+.dark-mode .experience-item, .dark-mode .project-item {
+  background-color: #161616;  /* Fondo de las tarjetas en modo oscuro */
+  color: #EDEDED;  /* Texto en modo oscuro */
+}
+
+.dark-mode .experience-item:hover, .dark-mode .project-item:hover {
+  background-color: #EA516F;  /* Fondo al hover con acento rosa */
+  color: #161616;
+}
+
+.dark-mode button {
+  background-color: #EA516F;  /* Botones en modo oscuro */
+  color: #EDEDED;
+}
+
+.dark-mode button:hover {
+  background-color: #EDEDED;
+  color: #161616;
+}
+
+/* Corrección para los iconos sociales */
+.dark-mode .social-links a {
+  color: #EDEDED;  /* Color correcto en modo oscuro */
+}
+
+.dark-mode .social-links a:hover {
+  color: #EA516F;  /* Hover en rosado */
+}
+
+/* Corrección para los iconos de frontend, backend, herramientas */
+.dark-mode .skills-grid .skill-item i {
+  color: #EDEDED;  /* Color de los iconos en modo oscuro */
+}
+
+.dark-mode .skills-grid .skill-item i:hover {
+  color: #EA516F;  /* Hover en rosado */
+}
+
+/* Corrección del color de los títulos Frontend, Backend y Herramientas */
+.dark-mode .skills-grid .skill-item h4 {
+  color: #EDEDED;  /* Asegura que el texto de los títulos sea claro */
+}
+
+/* Estilos para la pantalla de introducción */
+#intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #12372A;  /* Fondo verde oscuro */
+  color: #FBFADA;  /* Texto beige */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* Asegura que esté por encima de todo */
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.intro-content {
+  text-align: center;
+  animation: fadeIn 2s ease forwards;  /* Aparece con fade-in */
+}
+
+#intro-animation h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+#intro-animation p {
+  font-size: 18px;
+}
+
+/* Keyframes para animar el fade-in del contenido */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+ 

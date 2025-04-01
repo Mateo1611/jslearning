@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Mateo Yepes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+  <div id="intro-animation">
+    <div class="intro-content">
+      
+      <h1>Bienvenidos a mi Portafolio</h1>
+      <p>Explora mis proyectos y habilidades</p>
+    </div>
+  </div>
+  
+  
+
+  <!-- Mitad fija: Sidebar -->
+  <aside class="sidebar">
+    
+    <div class="sidebar-content">
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+      <h1 class="animate-title">Mateo Yepes</h1>
+      <h2 class="animate-subtitle">Desarrollador Frontend & Fullstack en Progreso</h2>
+      <nav>
+        <ul>
+          <li><a href="#about" class="menu-item">Sobre mí</a></li>
+          <li><a href="#experience" class="menu-item">Experiencia</a></li>
+          <li><a href="#projects" class="menu-item">Proyectos</a></li>
+          <li><a href="#skills" class="menu-item">Habilidades</a></li>
+          <li><a href="#contact" class="menu-item">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mitad scrollable: Contenido -->
+  <main class="content">
+    <section id="about" class="section">
+      <h2>Sobre mí</h2>
+      <p>¡Hola! Soy Mateo Yepes, un desarrollador en formación con una fuerte pasión por crear aplicaciones web interactivas y escalables. Actualmente me especializo en **Frontend** utilizando tecnologías como **HTML, CSS y JavaScript**, y estoy avanzando en **React** y **Node.js** para mejorar mis habilidades en el **backend**.</p>
+      <p>Me encanta resolver problemas complejos con soluciones simples y creativas, y siempre busco aprender nuevas tecnologías para aplicarlas en proyectos reales. Además, tengo experiencia en **automatización de procesos** y diseño de interfaces intuitivas que mejoren la experiencia del usuario.</p>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experiencia</h2>
+      <div class="experience-item">
+        <h3>Fullstack Developer en **Proyecto Personal**</h3>
+        <p>2023 - Presente</p>
+        <p>He desarrollado varias aplicaciones web personales que integran el uso de **API REST** y tecnologías modernas como **MongoDB**, **React**, y **Node.js**. Estos proyectos me han permitido consolidar mis conocimientos en JavaScript y aprender sobre la creación de aplicaciones escalables.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Desarrollador Web Freelance</h3>
+        <p>2022 - Presente</p>
+        <p>Trabajando como desarrollador freelance, he creado sitios web dinámicos y optimizados para diferentes clientes. Mi enfoque principal ha sido la construcción de interfaces de usuario intuitivas y accesibles, utilizando **HTML5, CSS3, y JavaScript**.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Proyectos</h2>
+      <div class="project-item">
+        <h3>Plataforma de Gestión de Tareas</h3>
+        <p>Una aplicación de gestión de tareas que permite a los usuarios registrar, editar y eliminar tareas. Utiliza **React** para el frontend y **Node.js** con **MongoDB** en el backend. Incluye autenticación de usuarios y almacenamiento en la nube.</p>
+      </div>
+      <div class="project-item">
+        <h3>Aplicación de Clima en Tiempo Real</h3>
+        <p>Esta aplicación consume la API de **OpenWeather** para mostrar el clima en tiempo real. Usé **React** para el frontend y utilicé **CSS Flexbox** para un diseño responsivo que se ajusta a cualquier dispositivo.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <i class="fas fa-code"></i>
+          <h4>Frontend</h4>
+          <p>HTML5, CSS3, JavaScript, React, Bootstrap</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-database"></i>
+          <h4>Backend</h4>
+          <p>Node.js, Express.js, MongoDB, API REST</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-tools"></i>
+          <h4>Herramientas</h4>
+          <p>Git, GitHub, Visual Studio Code</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contacto</h2>
+      <p>Si te interesa colaborar o tienes alguna consulta, no dudes en contactarme a través de las redes sociales o por correo electrónico: **mateo.yepes.dev@gmail.com**</p>
+    </section>
+  </main>
+
+  <!-- Script para el efecto de gradiente y animaciones -->
+  <script src="app.js"></script>
+
+</body>
+</html>
+
+

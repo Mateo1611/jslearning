@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Ejemplo Formulario </title>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value=""/>
+        <br/>
+        Apellido: <input type="text" name="apellido" value=""/>
+        <br/>
+
+    </form>
+<button onclick="mostrarValores()"> Mostrar </button>
+<div id="valores"></div>
+<div id="valores_2"></div>
+<script>
+    function mostrarValores(){
+        let formulario=document.forms["formulario"];//debe ser el mismo formularioque queremos recuperar	
+        let texto="";
+        for(let elemento of formulario){
+            texto+=elemento.value+"<br/>";
+        }
+        document.getElementById("valores").innerHTML=texto;
+
+        //otra formas de acceder a los elementos del formulario (individualmente)
+        let nombre=formulario["nombre"];
+        let apellido=formulario["apellido"];
+        texto2=nombre.value+apellido.value;
+        document.getElementById("valores_2").innerHTML=texto2;
+        
+
+    }
+
+
+
+</script>
+
+
+    </form>
+    
+</body>
+</html>

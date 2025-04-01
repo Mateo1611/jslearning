@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Manejo de DOM con JavaScript</h1>
+
+    Nombre:<input type="text" id="nombre"/>
+    Apellido:<input type="text" id="apellido"/>
+    <form id="forma">
+        Direccion:<input type="text" >
+        Telefono:<input type="text" >
+        Correo:<input type="email" >
+    </form>
+    <script>
+        //PODEMOS LLAMAR EVENTOS DESDE JS CON addEventListener(Reduce el codigodelhtml ,pero crece un poco el de JS)
+        document.getElementById("nombre").addEventListener("focus",cambiar);// se le quita el prefijo ON al evento
+        document.getElementById("nombre").addEventListener("blur",regresar);
+        function cambiar(evento){
+            let componente=evento.target; //target nos trae el elemento (objeto)alquele vamos a aplicar elevento (caja de texto en e stecaso ) 
+            componente.style.backgroundColor="yellow";
+        }
+        function regresar(evento){
+            let componente=evento.target;
+            componente.style.backgroundColor="white";
+        }
+        //Se puede  hacer con funciones flecha , lo haré para la caja deApellido
+        document.getElementById("apellido").addEventListener("focus",evento=>evento.target.style.backgroundColor="pink");
+        document.getElementById("apellido").addEventListener("blur",evento=>evento.target.style.backgroundColor="blue");
+
+        //Para no hacerlo a cada  campo de texto por separado,podemos mejor aplicarselo a un formulario ,ejemplo_:
+        let forma= document.getElementById("forma");
+        forma.addEventListener("focus",evento=>evento.target.style.backgroundColor="green",true);
+        //este ultimo parametro nuevo ("true") es elque nos permite aplicarselo a todo lo que contenga el formulario
+        forma.addEventListener("blur",evento=>evento.target.style.backgroundColor="white",true);
+    </script>
+    
+</body>
+</html>

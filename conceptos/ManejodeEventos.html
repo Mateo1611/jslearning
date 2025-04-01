@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Manejo dom</title>
+</head>
+<body onload="entrar()">
+    <h1 onclick="this.innerHTML='Nuevo titulo'" onmouseover="red(this)" onmouseout="green(this)">Manejo de DOM con JavaScript</h1>
+
+    <h2 onclick="cambiarTexto(this)">Esto va a hacer lo mismo que el renglón anterior</h2>
+    <p id="parrafo">este es un párrafo que será cambiado </p>
+
+    <div id="mostrar"></div>
+    <br/>
+    Nombre: <input type="text" onchange="convertir(this)" onfocus="yellow(this)" onblur="blue(this)">
+
+
+    <script>
+        function cambiarTexto(elemento){
+            elemento.innerHTML = "Nuevo titulo cambiado";
+        }
+
+        document.getElementById("parrafo").onclick=cambiarTexto2; 
+
+        function cambiarTexto2(){
+            document.getElementById("parrafo").innerHTML = "Este será el nuevo párrafo";
+            document.getElementById("parrafo").style.color = "red";
+            document.getElementById("mostrar").innerHTML = "Este es el nuevo contenido del div accionado haciendo clcik en el parrafo";
+
+        }
+
+        function entrar(){  //cuando se abra el navegador saldrá una alerta con lo siguiente:debido al eveneto onload en body
+            alert("Entrando a la página web");
+
+            //Tambien nos dirasi las cookies estan habilitads: esto cuando cargue lapagina por el onload del body
+
+            let text="";
+            if(navigator.cookieEnabled){
+                text+="Cookies habilitadas. ";
+            }
+            else{
+                text+="Cookies deshabilitadas. ";
+            }
+            document.getElementById("mostrar").innerHTML=text;
+        }
+        function convertir(nombre){
+            nombre.value=nombre.value.toUpperCase();
+
+        }
+        function red(elemento){
+            elemento.style.color="red";
+        }
+        function green(elemento){
+            elemento.style.color="green";
+        }
+        function yellow(elemento){
+            elemento.style.background="yellow";
+        }
+        function blue(elemento){
+            elemento.style.background="blue";
+        }
+    </script>
+   
+   
+
+    
+</body>
+</html>
