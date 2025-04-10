@@ -128,7 +128,7 @@ miNumero =-5;
 
 //Sentencia switch ejemplo:
 
-let diaSemana=1;
+let diaSemana=3;
 
 switch(diaSemana){
     case 1:
@@ -166,7 +166,7 @@ while(i<=5){
 }
 
 //do while ejemplo imprimir valores del cero al cinco
- i=0;
+ i=-1;
  do{
      console.log(i);
      i++;
@@ -233,6 +233,8 @@ for(i=0;i<matriz.length;i++){
     }
 }
 
+console.log(matriz[1].length)
+
 //otra manera de definir matrices
 
 let matriz2=[[0,1,2,3],[4,5,6,7],[8,9,10,11]];//matriz de 3*4
@@ -243,33 +245,36 @@ let matriz2=[[0,1,2,3],[4,5,6,7],[8,9,10,11]];//matriz de 3*4
 //Paso valor(datos primitivos)
 function cambiarValor(parametro){
     parametro=20;
+    return parametro
 }
 
-let argumento=10;
-cambiarValor(argumento);
+let argumento=5;
+console.log(cambiarValor(argumento));
 console.log(argumento);//no afecta en nada, la que se cambió fue la variable parámetro
 
 //Paso referencia(datos no primitivos) Array se pasan por referencia
 
 function  cambiarValor2(parametro){
     parametro[0]=20;
+    return parametro
 }
 
 let arreglo=[10];
 console.log(`antes de la  función: ${arreglo[0]}`);
-cambiarValor2(arreglo);
+console.log(cambiarValor2(arreglo));
 console.log(`despues de la función: ${arreglo[0]}`);
 //Se puede observar que acá si cambian,porque están apuntando a la misma referencia en memoria
 
 //Cadenas inmutables  (con cadenas pasa lo mismo que en ddatos primitivos)
 function cambiarValor3(parametro){
         parametro="adiós";
+        return parametro
 }
 
 let cadena="hola";
 console.log(cadena);
 
-cambiarValor3(cadena);
+console.log(cambiarValor3(cadena));
 
 console.log(cadena);//No le hace nada, parametro y cadena son variables distintas, cadena solo se usa como un medio
 
@@ -444,6 +449,7 @@ console.log(persona);
 //2.FOR IN (YA LA HABIA VISTO)
 for(prop in persona){
     console.log(persona[prop]);
+    console.log([prop])
 }
 
 //Object.values:Nos devuelve el objeto como un arreglo

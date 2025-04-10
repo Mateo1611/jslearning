@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --dark-primary-color: #FFA000;
+    --light-primary-color: #FFECB3;
+    --primary-color: #FFC107;
+    --text-icons: #212121;
+    --accent-color: #607D8B;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+    --divider-color: #f8f8f8;
+    --white: #FFF;
+  }
+  
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fredoka", serif;
+    transition: 0.7s;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--divider-color);
+    width: 80%;
+    border-radius: 25px;
+    margin-top: 30px;
+    
+}
+.header .banner{
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+.header .banner .img-banner img{
+    width: 135px;
+    margin: 20px 0px;
+}
+
+.header .banner .img-banner img:hover{
+    transform: scale(1.1);
+    
+}
+ 
+.header .banner .text h3{
+    font-size: 2rem;
+    color: var(--secondary-text);
+
+}
+
+.header .banner .text .h2{
+    font-size: 2rem;
+    color: var(--primary-text);
+}
+
+.header .nav{
+    background-color:var(--dark-primary-color);
+    display: flex;
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+    
+    justify-content: center;
+    gap: 50px;
+}
+
+.header .nav a{
+    text-decoration: none;
+    margin: 15px 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+.header .nav a:hover{
+    font-weight: 900;
+}
+
+.info{
+    display: flex;
+    flex: row;
+    width: 80%;
+   
+    margin: 50px 0px;
+
+}
+
+.info .article{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.info .article .section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-primary-color);
+    
+    margin: 25px 25px 25px 0px ;
+    border-radius: 25px;
+    padding: 25px ;
+
+}
+
+.info .article .section:hover{
+    transform: scale(1.1);
+}
+
+.info .article .section h2{
+    font-size: 1.5rem;
+    color: var(--primary-text);
+}
+ 
+.info .article .section a{
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.info .article .section a:hover{
+    color: var(--dark-primary-color);
+}
+
+.info .article .section .preview{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.info .article .section .preview p{
+    font-size: 1.1 rem;
+    color: var(--secondary-text);
+
+}
+
+.info .article .section .preview img{
+    width: auto;
+    height: 130px;
+}
+.info .article .section .preview img:hover{
+    transform: scale(1.1);
+}
+
+.info .aside{
+    
+    width: 40%;
+    margin: 25px 0px 25px 0px;
+    
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    padding:0px 0px 55px 0px;
+    box-sizing: border-box;
+    
+    
+
+}
+
+.info aside h2{
+    font-size: 1.5rem;
+    background-color: var(--dark-primary-color);
+    color: var(--primary-text);
+    border-radius: 25px 25px 0px 0px;
+    padding: 10px 0px;
+    text-align: center;
+   
+   
+
+}
+
+.info .aside .form{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap:0px;
+    
+}
+
+.info .aside .form label{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    
+}
+
+.info .aside .form input{
+    border-radius: 15px;
+    padding: 5px ;
+    border:none;
+    background-color: var(--light-primary-color);
+    outline: none;
+    text-align: center;
+    margin-top: -15px;
+}
+
+.info .aside .form .button input{
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 10px 0px 5px 0px;
+
+}
+.info .aside .form .button input:hover{
+    background-color: var(--dark-primary-color);
+    color: var(--primary-text);
+}
+
+footer{
+    text-align: center;
+    background-color: var(--dark-primary-color);
+    width: 80%;
+    padding: 15px 0px;
+    margin: -45px 0px 25px 0px;
+    border-radius: 0px 0px 25px 25px;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
